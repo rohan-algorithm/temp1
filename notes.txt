@@ -1,0 +1,47 @@
+//Authentication and Authorization
+Authentication - Validating User
+Authorization -  Validating + Permission / Allowed to perform task 
+Or Autherized to perform some tasks which are only alllowed to be executed by the admin
+
+Cookies And Session
+
+1. How to set Cookies
+To set-up in any route on backend
+     res.cookie("name","Rohan");
+To read in any route
+     req.cookies
+What is Cookie? Server se browser pr kuch data save krvadiya    
+ 
+
+Bcrypt - For encripting Password
+Salt - Random String
+bcript.genSalt(10,function(err,salt)){
+        bcript.hash(""rohan12",salt,function(err,hash)){
+            console.log(hash)
+            // Stored hash pass in DB
+        }
+}
+Dcript - 
+bcript.compare("rohan12",hashFuntion) // Either T or F
+
+
+
+JWT 
+Header - Tells About algorithms used
+payLoad - Actual data
+Signature - 
+
+token = jwt.sign({uid : "rad",email: "er"},"secret")
+
+
+data = jwt.verify(req,cookies.token,"Secret");
+
+
+
+npm i jsonwebtoken bcript cookie-parser
+
+
+What is a Hook? A Hook is a special function that lets you “hook into” React features. For example, useState is a Hook that lets you add React state to function components. 
+
+
+When would I use a Hook? If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component.
